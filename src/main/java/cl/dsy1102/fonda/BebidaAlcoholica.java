@@ -1,6 +1,6 @@
 package cl.dsy1102.fonda;
 
-public class BebidaAlcoholica extends Bebida {
+public class BebidaAlcoholica extends Bebida implement ConsumoResponsable {
 
    /* Atributos */
    private static final int LIMITE_UNIDADES_POR_CLIENTE = 3;

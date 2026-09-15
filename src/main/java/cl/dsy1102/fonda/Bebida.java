@@ -23,7 +23,7 @@ public abstract class Bebida {
     }
 
     public void setNombre(String nombre) {
-        if (nombre == null || nombre.isEmpty()) {
+        if (nombre == null || nombre.trim().isEmpty()) {
             throw new IllegalArgumentException("El nombre es obligatorio");
         } else {
         this.nombre = nombre;

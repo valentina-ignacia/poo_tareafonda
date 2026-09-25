@@ -1,6 +1,6 @@
 package cl.dsy1102.fonda;
 
-public class BebidaAlcoholica extends Bebida implement ConsumoResponsable {
+public class BebidaAlcoholica extends Bebida implements ConsumoResponsable {
 
    /* Atributos */
    private static final int LIMITE_UNIDADES_POR_CLIENTE = 3;
@@ -63,5 +63,26 @@ public class BebidaAlcoholica extends Bebida implement ConsumoResponsable {
     @Override
     public String obtenerDetalle() {
         return "Tipo: Bebida Alcohólica | Nombre: "+getNombre()+" | Volumen: "+getVolumenML()+"| Stock: "+getStock()+ " | Grados Alcohol: " + getGradosAlcohol()+ " | Certificada: "+ (certificada ? "Si" : "No ")+ " | Venta Restringida: "+(ventaRestringida ? "Si" : "No")+" | Precio: $"+ calcularPrecio();
+    }
+
+    /* Métodos Interfaz */
+    @Override
+    public boolean tieneVentaRestringida() {
+        return ventaRestringida;
+    }
+
+    @Override
+    public void restringirVenta() {
+        if (ventaRestringida) {
+            System.out.println("La venta ya está restringida.");
+        } else {
+            ventaRestringida = true;
+            System.out.println("Se restringió la venta.");
+        }
+    }
+
+    @Override
+    public boolean superaLimite(int unidades) {
+        return unidades > LIMITE_UNIDADES_POR_CLIENTE;
     }
 }

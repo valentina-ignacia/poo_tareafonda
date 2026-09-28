@@ -24,7 +24,7 @@ public class GestorFonda {
 
     public void registrar(Bebida bebida) {
         this.bebidas.add(bebida);
-        System.out.println("Bebida registrada.");
+        System.out.println(bebida.getNombre()+" registrada correctamente.");
     }
 
     public List<Bebida> buscarPorNombres(String nombre) {

@@ -21,15 +21,19 @@ public class Main {
 
         System.out.println("Proyecto listo. Comienza por la clase Bebida.");
 
+        /*Instanciar Bebidas*/
         BebidaAlcoholica chichaAlcoholica = new BebidaAlcoholica("Chicha",1000,40,12.0,false);
         BebidaAlcoholica piscoSour = new BebidaAlcoholica("Pisco Sour",500,25,18.0,true);
         BebidaSinAlcohol chichasinAlcohol = new BebidaSinAlcohol("Chicha",1000,60,95);
         BebidaSinAlcohol moteConHuesillo = new BebidaSinAlcohol("Mote Con Huesillo",400,50,70);
 
+        /* Restringir venta Chicha */
         chichaAlcoholica.restringirVenta();
 
+        /* Instanciar Gestor Fonda */
         GestorFonda gestor = new GestorFonda();
 
+        /* Registrar todas las bebidas en el Gestor Fonda*/
         gestor.registrar(chichaAlcoholica);
         gestor.registrar(piscoSour);
         gestor.registrar(chichasinAlcohol);

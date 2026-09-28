@@ -35,6 +35,6 @@ public class BebidaSinAlcohol extends Bebida {
 
     @Override
     public String obtenerDetalle() {
-        return "Tipo: Bebida Sin Alcohol | Nombre: "+getNombre()+" | Volumen: "+getVolumenML()+"| Stock: "+getStock()+" | Azucar Por Litro: "+azucarPorLitro+" | Precio: $"+ calcularPrecio();
+        return "Tipo: Bebida Sin Alcohol | Nombre: "+getNombre()+" | Volumen: "+getVolumenML()+"| Stock: "+getStock()+" | Azucar Por Litro: "+azucarPorLitro+" | Precio: $"+ calcularPrecio()+"\n---";
     }
 }

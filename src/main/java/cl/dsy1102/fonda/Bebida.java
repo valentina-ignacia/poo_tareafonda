@@ -60,6 +60,6 @@ public abstract class Bebida {
 
     @Override
     public String toString() {
-        return "Nombre: " + nombre + " Volumen: " + volumenML + " ml";
+        return "Nombre: " + nombre + " | Volumen: " + volumenML + " ml";
     }
 }

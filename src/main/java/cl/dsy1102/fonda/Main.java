@@ -33,17 +33,36 @@ public class Main {
         /* Instanciar Gestor Fonda */
         GestorFonda gestor = new GestorFonda();
 
+        System.out.println("\n");  // vacío para que se entienda el main cuando corra :)
+
         /* Registrar todas las bebidas en el Gestor Fonda*/
         gestor.registrar(chichaAlcoholica);
         gestor.registrar(piscoSour);
         gestor.registrar(chichasinAlcohol);
         gestor.registrar(moteConHuesillo);
 
-        List<Bebida> resultados = gestor.buscarPorNombres("Chicha");
+        /*Buscar por Nombre */
+        System.out.println("\n=== BUSQUEDA POR NOMBRE: \"Chicha\" ===");
+
+        List<Bebida> resultados = gestor.buscarPorNombre("Chicha");
         for (Bebida bebida : resultados) {
             System.out.println(bebida.obtenerDetalle());
         }
 
+        /*Ventas*/
+        System.out.println("\n=== VENTAS ===");
+
+        gestor.vender("Pisco Sour",2);
+        gestor.vender("Pisco Sour", 5);
+        gestor.vender("Chicha", 1);
+        gestor.vender("Mote con Huesillo", 6);
+
+        /*Lista bebiditas*/
+        System.out.println("\n=== LISTADO DE BEBIDAS ===");
+
+        for (Bebida bebida : gestor.getBebidas()) {
+            System.out.println(bebida);
+        }
 
     }
 }

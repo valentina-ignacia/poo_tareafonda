@@ -81,7 +81,7 @@ public class GestorFonda {
             return;
         }
 
-        // Revisa si la bebida es parte del interfaz ConsumoResponsable
+        //* Revisa si la bebida es parte del interfaz ConsumoResponsable
         if (bebidaEncontrada instanceof ConsumoResponsable) {
 
             // Crea una variable consumo, que registra la bebida, que será tratada con la interfaz de consumo responsable

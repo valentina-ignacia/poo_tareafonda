@@ -60,9 +60,11 @@ public class Main {
         /*Lista bebiditas*/
         System.out.println("\n=== LISTADO DE BEBIDAS ===");
 
-        for (Bebida bebida : gestor.getBebidas()) {
+        for (Bebida bebida : gestor.obtenerTodas()) {
             System.out.println(bebida);
         }
+
+
 
     }
 }
